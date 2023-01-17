@@ -8,7 +8,9 @@ body {
     background-color: rgb(231, 193, 235);
     font-family: 'Kanit', sans-serif;
 }
-
+main{
+    min-width: 400px;
+}
 .container {
     width: 80%;
     margin: 30px auto;
@@ -55,6 +57,21 @@ body {
     border-radius: 10px;
     margin-bottom: 20px;
 }
+
+.list_card_container{
+    display: grid;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card{
+    border: 1px solid #bfbfbf;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #7f538991;
+    display: grid;
+    gap: 10px;
+}  
 
 @media (min-width:110px){
     .container{

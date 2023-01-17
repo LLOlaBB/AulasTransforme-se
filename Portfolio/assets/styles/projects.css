@@ -1,0 +1,47 @@
+.content_project{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.image_container{
+    align-self: center;
+}
+
+.project_image{
+    width: 100%;
+}
+.project_technologies{
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    text-transform: uppercase;
+}
+.project_technologies > li{
+    background-color: darkorchid;
+    padding: 0 10px;
+    color: aliceblue;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.project_info{
+    display: grid;
+    gap: 15px;
+}
+.project_description{
+    max-height: 160px;
+    min-height: 160px;
+    overflow: auto;
+}
+.button_container{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.button_link{
+    background-color: darkviolet;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bolder;
+}
