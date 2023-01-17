@@ -10,4 +10,8 @@
     background-color: #7f538991;
     display: grid;
     gap: 10px;
+}  
+.activities{
+    margin-left: 20px;
+    list-style: circle;
 }
