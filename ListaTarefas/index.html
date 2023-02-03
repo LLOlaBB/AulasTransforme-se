@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="./assets/lib/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/styles/index.css">
 </head>
 
@@ -13,22 +14,24 @@
     <div class="mainContent">
         <section>
             <form id="formCreateTask">
-                <div>
-                    <label for="title">Titulo</label>
-                    <input type="text" id="title" placeholder="Informe o titulo da tarefa" required>
+                <div class="mb-3">
+                    <label for="title" class="form-label">Titulo: </label>
+                    <input type="text" class="form-control" id="title" aria-describedby="Informe o titulo da tarefa"
+                        placeholder="Informe o titulo da tarefa" required>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Descrição:</label>
+                    <textarea class="form-control" aria-describedby="Informe a descrição da tarefa" id="description"
+                        rows="2" maxlength="80" required placeholder="Informe a descrição da tarefa"></textarea>
                 </div>
                 <div>
-                    <label for="description">Descrição</label>
-                    <textarea id="description" rows="2" maxlength="80" required
-                        placeholder="Informe a descrição da tarefa"></textarea>
-                </div>
-                <div>
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" class="btn btn-success">Cadastrar</button>
                 </div>
             </form>
         </section>
-        <section>
-            <table border="1">
+        <section class="overflow-auto">
+            <table class="table table-primary table-striped table-hover caption-top">
+                    <caption class="title">Lista de Tarefas</caption>
                 <thead>
                     <tr>
                         <th>#</th>
@@ -38,11 +41,12 @@
                     </tr>
                 </thead>
                 <tbody id="tbodyTasks">
-                    
+
                 </tbody>
             </table>
         </section>
     </div>
+    <script src="./assets/lib/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 

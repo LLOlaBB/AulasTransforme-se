@@ -38,7 +38,15 @@ function updateViewTable(List) {
             <td>${index + 1}</td>
             <td>${item.title}</td>
             <td>${item.description}</td>
-            <td>Ações</td>
+            <td>
+                <div class="dropdown-center">
+                    <img class="dropdown-toggle icon-button" data-bs-toggle="dropdown" src="./assets/icons/more.svg">
+                    <ul class="dropdown-menu ">
+                        <li><h6 class="dropdown-header">Ações</h6></li>
+                        <li><button class="dropdown-item">Excluir</button></li>
+                    </ul>
+                </div>
+            </td>
         `;
         tbodyTask.appendChild(trElement);
     });
@@ -52,13 +60,13 @@ function getTasksLocaStorage() {
         const dataString = localStorage.getItem(KEY_TASKS_LOCAL_STORAGE);
         const list = JSON.parse(dataString);
         return list;
-        if(dataString === "") {
+        if (dataString === "") {
             throw "sem dados";
         }
     } catch (exception) {
-        if(exception !=="sem dados"){
+        if (exception !== "sem dados") {
             alert("Não foi possível recuperar sua lista de tarefas");
-            
+
         }
         return [];
     }

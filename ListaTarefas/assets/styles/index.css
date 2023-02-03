@@ -13,6 +13,18 @@ body{
     color: var(--main-text-color);
     font-family: 'Inconsolata', monospace;
 }
+.title{
+    color: var(--main-text-color);
+}
+.icon-button{
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    padding: 2px 0;
+}
+.overflow-auto{
+    overflow: auto;
+}
 .mainContent{
     display: grid;
     grid-template-columns: 1fr 1fr;
